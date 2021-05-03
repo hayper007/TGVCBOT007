@@ -1,8 +1,9 @@
 {
   "name": "MusicBot",
+  "logo": "https://telegra.ph/file/1bfa341fae051359be9cb.jpg",
   "description": "Open-Source bot to play songs in your Telegram's Group Voice Chat. Powered by PyTgCalls.",
   "keywords": ["music", "voicechat", "telegram"],
-  "repository": "https://github.com/TheVaders/MusicBot",
+  "repository": "https://github.com/kingboyss/TGVCBOT007",
   "stack": "container",
   "env": {
     "SESSION_NAME": {
@@ -16,7 +17,7 @@
     "BOT_NAME": {
       "description": "Your MusicPlayer Bot Name.",
       "required": false,
-      "value": "Hêllẞø†"
+      "value": "Goldfishmusicbot"
     },
     "API_ID": {
       "description": "App ID from my.telegram.org/apps",
@@ -33,7 +34,7 @@
     "DURATION_LIMIT": {
       "description": "Max audio duration limit for downloads (minutes).",
       "required": true,
-      "value": "10"
+      "value": "1440"
     }
   }
 }
