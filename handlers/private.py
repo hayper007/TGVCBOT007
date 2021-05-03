@@ -15,25 +15,25 @@ from config import BOT_NAME as bn
 
 @Client.on_message(command("start") & other_filters2)
 async def start(_, message: Message):
-    await message.reply_text(
+   await message.reply_text(
         f"""I am **{bn}** !!
 I let you play music in your group's voice chat 😉
 The commands I currently support are:
-⚜️ /play - __Plays the replied audio file or YouTube video through link.__
-⚜️ /song - __Uploads the searched song in the chat.__
-⚜️ /pause - __Pause Voice Chat Music.__
-⚜️ /resume - __Resume Voice Chat Music.__
-⚜️ /skip - __Skips the current Music Playing In Voice Chat.__
-⚜️ /stop - __Clears The Queue as well as ends Voice Chat Music.__
+1 /play - __Plays the replied audio file or YouTube video through link.__
+2 /song - __Uploads the searched song in the chat.__
+3 /pause - __Pause Voice Chat Music.__
+4 /resume - __Resume Voice Chat Music.__
+5 /skip - __Skips the current Music Playing In Voice Chat.__
+6 /stop - __Clears The Queue as well as ends Voice Chat Music.__
         """,
         reply_markup=InlineKeyboardMarkup(
             [
                 [
                     InlineKeyboardButton(
-                        "Group 💬", url="https://t.me/hellbot_official_chat"
+                        "Group 💬", url="https://t.me/goldfishmusic"
                     ),
                     InlineKeyboardButton(
-                        "Channel 📣", url="https://t.me/hellbot_official"
+                        "Channel 📣", url="https://t.me/goldfishmusic_dp"
                     )
                 ]
             ]
