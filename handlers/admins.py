@@ -22,7 +22,7 @@ async def pause(_, message: Message):
         await message.reply_text(f"**{BN} :-** 🙄 Nothing is playing!")
     else:
         callsmusic.pytgcalls.pause_stream(message.chat.id)
-        await message.reply_text(f"**{BN} :-** 🤐 रोक दिया भोसडी के")
+        await message.reply_text(f"**{BN} :-** 🤐 stopped")
 
 
 @Client.on_message(command("resume") & other_filters)
@@ -45,7 +45,7 @@ async def resume(_, message: Message):
 @authorized_users_only
 async def stop(_, message: Message):
     if message.chat.id not in callsmusic.pytgcalls.active_calls:
-        await message.reply_text(f"**{BN} :-** 🙄 भोसड़ी मके कुछ नही बज रहा !")
+        await message.reply_text(f"**{BN} :-** 🙄 Not playing anything !")
     else:
         try:
             callsmusic.queues.clear(message.chat.id)
@@ -53,7 +53,7 @@ async def stop(_, message: Message):
             pass
 
         callsmusic.pytgcalls.leave_group_call(message.chat.id)
-        await message.reply_text(f"**{BN} :-** ❌ गण्ड में दाल लो बन्द कर के !")
+        await message.reply_text(f"**{BN} :-** ❌ Stopped !")
 
 
 @Client.on_message(command("skip") & other_filters)
@@ -61,7 +61,7 @@ async def stop(_, message: Message):
 @authorized_users_only
 async def skip(_, message: Message):
     if message.chat.id not in callsmusic.pytgcalls.active_calls:
-        await message.reply_text(f"**{BN} :-** 🙄 भोसड़ी के जब आगे song है ही नही तो skip क्यो कर रहा है लौड़े!")
+        await message.reply_text(f"**{BN} :-** 🙄 Not any song for skip!")
     else:
         callsmusic.queues.task_done(message.chat.id)
 
@@ -73,4 +73,4 @@ async def skip(_, message: Message):
                 callsmusic.queues.get(message.chat.id)["file_path"]
             )
 
-        await message.reply_text(f"**{BN} :-** 😬 गण्ड में खुजली हो रही है skip कर दिया न !")
+        await message.reply_text(f"**{BN} :-** 😬 song skipped !")
