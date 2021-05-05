@@ -35,10 +35,10 @@ async def play(_, message: Message):
     elif url:
         file_path = await converter.convert(youtube.download(url))
     else:
-        return await message.reply_text(f"**{bn} :-** (bsdk सही से comnd दे) You did not give me anything to play!")
+        return await message.reply_text(f"**{bn} :-** send right command You did not give me anything to play!")
 
     if message.chat.id in callsmusic.pytgcalls.active_calls:
-        await message.reply_text(f"**{bn} :-** 😉 बेटे ओ बेटे मौज कर दी बेटे😎 #{await callsmusic.queues.put(message.chat.id, file_path=file_path)} !")
+        await message.reply_text(f"**{bn} :-** 😉 song added 😎 #{await callsmusic.queues.put(message.chat.id, file_path=file_path)} !")
     else:
         callsmusic.pytgcalls.join_group_call(message.chat.id, file_path)
-        await message.reply_text(f"**{bn} :-** 🥳 भोसड़ी🤣 के रुक जाया कर 30 secend ")
+        await message.reply_text(f"**{bn} :-** 🥳 playing wait 9 secend ")
