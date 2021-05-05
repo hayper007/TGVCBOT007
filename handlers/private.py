@@ -30,10 +30,10 @@ The commands I currently support are:
             [
                 [
                     InlineKeyboardButton(
-                        "Group 💬", url="https://t.me/DW_FILMS_team"
+                        "Film's grp", url="https://t.me/DW_FILMS_team"
                     ),
                     InlineKeyboardButton(
-                        "Channel 📣", url="https://t.me/DW_FILMS_team"
+                        "Mode Apk ", url="https://t.me/Zxmodeapk"
                     )
                 ]
             ]
