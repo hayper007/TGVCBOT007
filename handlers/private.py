@@ -17,8 +17,11 @@ from config import BOT_NAME as bn
 async def start(_, message: Message):
    await message.reply_text(
         f"""I am **{bn}** !!
-I let you play music in your group's voice chat 😉
-The commands I currently support are:
+Hi {message.from_user.first_name}!
+\nI can play music in your group's voice chat
+Maintained by @HEENA3434 😍
+\nTo add in your group contact us at @HEENA3434.
+\nHit /help list of available commands:
 1 /play - __Plays the replied audio file or YouTube video through link.__
 2 /song - __Uploads the searched song in the chat.__
 3 /pause - __Pause Voice Chat Music.__
@@ -30,10 +33,10 @@ The commands I currently support are:
             [
                 [
                     InlineKeyboardButton(
-                        "Film's grp", url="https://t.me/DW_FILMS_team"
+                        "Groups", url="https://t.me/ONLY_MY_FRND"
                     ),
                     InlineKeyboardButton(
-                        "Mode Apk ", url="https://t.me/Zxmodeapk"
+                        "Channel ", url="https://t.me/ONLY_MY_FRND"
                     )
                 ]
             ]
